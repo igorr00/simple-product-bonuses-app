@@ -56,7 +56,7 @@ router.post('/', async (req, res) => {
 
     const upline = await getUpline(userId);
 
-    const availableAt = new Date(Date.now() + 60 * 60 * 1000); // +1 hour
+    const availableAt = new Date(Date.now() + 60 * 60 * 1000);
 
     for (const uplineUserId of upline) {
       const teamBonusAmount = price * 0.05;
